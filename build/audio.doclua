@@ -1,0 +1,31 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.audio.getDistanceModel"] = [=[{DistanceModel} model = love.audio.getDistanceModel()]=],
+  ["love.audio.getSourceCount"] = [=[{number} numSources = love.audio.getSourceCount()]=],
+  ["love.audio.getOrientation"] = [=[{number} fx, {number} fy, {number} fz, {number} ux, {number} uy, {number} uz = love.audio.getOrientation()]=],
+  ["love.audio.getPosition"] = [=[{number} x, {number} y, {number} z = love.audio.getPosition()]=],
+  ["love.audio.getVelocity"] = [=[{number} x, {number} y, {number} z = love.audio.getVelocity()]=],
+  ["love.audio.getVolume"] = [=[{number} volume = love.audio.getVolume()]=],
+  ["love.audio.newSource"] = [=[{Source} source = love.audio.newSource({string} filename, {SourceType} type)]=],
+  ["love.audio.pause"] = [=[love.audio.pause()]=],
+  ["love.audio.play"] = [=[love.audio.play({Source} source)]=],
+  ["love.audio.resume"] = [=[love.audio.resume()]=],
+  ["love.audio.rewind"] = [=[love.audio.rewind()]=],
+  ["love.audio.setDistanceModel"] = [=[love.audio.setDistanceModel({DistanceModel} model)]=],
+  ["love.audio.setOrientation"] = [=[love.audio.setOrientation({number} fx, {number} fy, {number} fz, {number} ux, {number} uy, {number} uz)]=],
+  ["love.audio.setPosition"] = [=[love.audio.setPosition({number} x, {number} y, {number} z)]=],
+  ["love.audio.setVelocity"] = [=[love.audio.setVelocity({number} x, {number} y, {number} z)]=],
+  ["love.audio.setVolume"] = [=[love.audio.setVolume({number} volume)]=],
+  ["love.audio.stop"] = [=[love.audio.stop()]=]
+}

@@ -1,0 +1,17 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.thread.getChannel"] = [=[{Channel} channel = love.thread.getChannel({string} name)]=],
+  ["love.thread.newChannel"] = [=[{Channel} channel = love.thread.newChannel()]=],
+  ["love.thread.newThread"] = [=[{Thread} thread = love.thread.newThread({string} name, {string} filename)]=]
+}

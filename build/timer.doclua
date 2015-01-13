@@ -1,0 +1,20 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.timer.getAverageDelta"] = [=[{number} delta = love.timer.getAverageDelta()]=],
+  ["love.timer.getDelta"] = [=[{number} dt = love.timer.getDelta()]=],
+  ["love.timer.getFPS"] = [=[{number} fps = love.timer.getFPS()]=],
+  ["love.timer.getTime"] = [=[{number} time = love.timer.getTime()]=],
+  ["love.timer.sleep"] = [=[love.timer.sleep({number} s)]=],
+  ["love.timer.step"] = [=[love.timer.step()]=]
+}

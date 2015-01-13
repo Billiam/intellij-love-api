@@ -1,0 +1,27 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.math.gammaToLinear"] = [=[{number} lr, {number} lg, {number} lb = love.math.gammaToLinear({number} r, {number} g, {number} b)]=],
+  ["love.math.getRandomSeed"] = [=[{number} low, {number} high = love.math.getRandomSeed()]=],
+  ["love.math.getRandomState"] = [=[{string} state = love.math.getRandomState()]=],
+  ["love.math.isConvex"] = [=[{boolean} convex = love.math.isConvex({table} vertices)]=],
+  ["love.math.linearToGamma"] = [=[{number} cr, {number} cg, {number} cb = love.math.linearToGamma({number} lr, {number} lg, {number} lb)]=],
+  ["love.math.newBezierCurve"] = [=[{BezierCurve} curve = love.math.newBezierCurve({table} vertices)]=],
+  ["love.math.newRandomGenerator"] = [=[{RandomGenerator} rng = love.math.newRandomGenerator()]=],
+  ["love.math.noise"] = [=[{number} value = love.math.noise({number} x)]=],
+  ["love.math.random"] = [=[{number} number = love.math.random()]=],
+  ["love.math.randomNormal"] = [=[{number} number = love.math.randomNormal({number} stddev, {number} mean)]=],
+  ["love.math.setRandomSeed"] = [=[love.math.setRandomSeed({number} seed)]=],
+  ["love.math.setRandomState"] = [=[love.math.setRandomState({string} state)]=],
+  ["love.math.triangulate"] = [=[{table} triangles = love.math.triangulate({table} polygon)]=]
+}

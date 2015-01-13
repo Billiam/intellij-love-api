@@ -1,0 +1,17 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.image.isCompressed"] = [=[{boolean} compressed = love.image.isCompressed({string} filename)]=],
+  ["love.image.newCompressedData"] = [=[{CompressedData} compressedData = love.image.newCompressedData({string} filename)]=],
+  ["love.image.newImageData"] = [=[{ImageData} imageData = love.image.newImageData({number} width, {number} height)]=]
+}

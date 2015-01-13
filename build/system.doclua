@@ -1,0 +1,20 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.system.getClipboardText"] = [=[{string} text = love.system.getClipboardText()]=],
+  ["love.system.getOS"] = [=[{string} os_string = love.system.getOS()]=],
+  ["love.system.getPowerInfo"] = [=[{PowerState} state, {number} percent, {number} seconds = love.system.getPowerInfo()]=],
+  ["love.system.getProcessorCount"] = [=[{number} cores = love.system.getProcessorCount()]=],
+  ["love.system.openURL"] = [=[{boolean} success = love.system.openURL({string} url)]=],
+  ["love.system.setClipboardText"] = [=[love.system.setClipboardText({string} text)]=]
+}

@@ -1,0 +1,19 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.keyboard.hasKeyRepeat"] = [=[{boolean} enabled = love.keyboard.hasKeyRepeat()]=],
+  ["love.keyboard.hasTextInput"] = [=[{boolean} enabled = love.keyboard.hasTextInput()]=],
+  ["love.keyboard.isDown"] = [=[{boolean} down = love.keyboard.isDown({KeyConstant} key)]=],
+  ["love.keyboard.setKeyRepeat"] = [=[love.keyboard.setKeyRepeat({boolean} enable)]=],
+  ["love.keyboard.setTextInput"] = [=[love.keyboard.setTextInput({boolean} enable)]=]
+}

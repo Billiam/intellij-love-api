@@ -1,0 +1,30 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.window.getDimensions"] = [=[{number} width, {number} height = love.window.getDimensions()]=],
+  ["love.window.getFullscreen"] = [=[{boolean} fullscreen, {FullscreenType} fstype = love.window.getFullscreen()]=],
+  ["love.window.getFullscreenModes"] = [=[{table} modes = love.window.getFullscreenModes({number} display)]=],
+  ["love.window.getHeight"] = [=[{number} height = love.window.getHeight()]=],
+  ["love.window.getIcon"] = [=[{ImageData} imagedata = love.window.getIcon()]=],
+  ["love.window.getMode"] = [=[{number} width, {number} height, {boolean} fullscreen, {boolean} vsync, {number} fsaa = love.window.getMode()]=],
+  ["love.window.getPixelScale"] = [=[{number} scale = love.window.getPixelScale()]=],
+  ["love.window.getWidth"] = [=[{number} width = love.window.getWidth()]=],
+  ["love.window.hasFocus"] = [=[{boolean} focus = love.window.hasFocus()]=],
+  ["love.window.hasMouseFocus"] = [=[{boolean} focus = love.window.hasMouseFocus()]=],
+  ["love.window.isCreated"] = [=[{boolean} created = love.window.isCreated()]=],
+  ["love.window.isVisible"] = [=[{boolean} visible = love.window.isVisible()]=],
+  ["love.window.setFullscreen"] = [=[{boolean} success = love.window.setFullscreen({boolean} fullscreen)]=],
+  ["love.window.setIcon"] = [=[{boolean} success = love.window.setIcon({ImageData} imagedata)]=],
+  ["love.window.setMode"] = [=[{boolean} success = love.window.setMode({number} width, {number} height, {table} flags)]=],
+  ["love.window.setTitle"] = [=[love.window.setTitle({string} title)]=]
+}

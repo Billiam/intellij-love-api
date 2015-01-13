@@ -1,0 +1,40 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.draw"] = [=[love.draw()]=],
+  ["love.errhand"] = [=[love.errhand({string} msg)]=],
+  ["love.focus"] = [=[love.focus({boolean} f)]=],
+  ["love.gamepadaxis"] = [=[love.gamepadaxis({Joystick} joystick, {GamepadAxis} axis)]=],
+  ["love.gamepadpressed"] = [=[love.gamepadpressed({Joystick} joystick, {GamepadButton} button)]=],
+  ["love.gamepadreleased"] = [=[love.gamepadreleased({Joystick} joystick, {GamepadButton} button)]=],
+  ["love.joystickadded"] = [=[love.joystickadded({Joystick} joystick)]=],
+  ["love.joystickaxis"] = [=[love.joystickaxis({Joystick} joystick, {number} axis, {number} value)]=],
+  ["love.joystickhat"] = [=[love.joystickhat({Joystick} joystick, {number} hat, {JoystickHat} direction)]=],
+  ["love.joystickpressed"] = [=[love.joystickpressed({number} joystick, {number} button)]=],
+  ["love.joystickreleased"] = [=[love.joystickreleased({number} joystick, {number} button)]=],
+  ["love.joystickremoved"] = [=[love.joystickremoved({Joystick} joystick)]=],
+  ["love.keypressed"] = [=[love.keypressed({KeyConstant} key, {boolean} isrepeat)]=],
+  ["love.keyreleased"] = [=[love.keyreleased({KeyConstant} key)]=],
+  ["love.load"] = [=[love.load({table} arg)]=],
+  ["love.mousefocus"] = [=[love.mousefocus({boolean} f)]=],
+  ["love.mousepressed"] = [=[love.mousepressed({number} x, {number} y, {MouseConstant} button)]=],
+  ["love.mousereleased"] = [=[love.mousereleased({number} x, {number} y, {MouseConstant} button)]=],
+  ["love.quit"] = [=[{boolean} r = love.quit()]=],
+  ["love.resize"] = [=[love.resize({number} w, {number} h)]=],
+  ["love.run"] = [=[love.run()]=],
+  ["love.textinput"] = [=[love.textinput({string} text)]=],
+  ["love.threaderror"] = [=[love.threaderror({Thread} thread, {string} errorstr)]=],
+  ["love.update"] = [=[love.update({number} dt)]=],
+  ["love.visible"] = [=[love.visible({boolean} v)]=],
+  ["love.getVersion"] = [=[{number} major, {number} minor, {number} revision, {string} codename = love.getVersion()]=]
+}

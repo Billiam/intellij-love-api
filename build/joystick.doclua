@@ -1,0 +1,17 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.joystick.setGamepadMapping"] = [=[{boolean} success = love.joystick.setGamepadMapping({string} guid, {GamepadButton} button, {JoystickInputType} inputtype, {number} inputindex, {JoystickHat} hatdirection)]=],
+  ["love.joystick.getJoystickCount"] = [=[{number} joystickcount = love.joystick.getJoystickCount()]=],
+  ["love.joystick.getJoysticks"] = [=[{table} joysticks = love.joystick.getJoysticks()]=]
+}

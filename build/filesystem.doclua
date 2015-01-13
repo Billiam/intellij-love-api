@@ -1,0 +1,36 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.filesystem.append"] = [=[{boolean} success, {string} errormsg = love.filesystem.append({string} name, {string} data, {number} size)]=],
+  ["love.filesystem.createDirectory"] = [=[{boolean} ok = love.filesystem.createDirectory({string} name)]=],
+  ["love.filesystem.exists"] = [=[{boolean} e = love.filesystem.exists({string} filename)]=],
+  ["love.filesystem.getAppdataDirectory"] = [=[{string} path = love.filesystem.getAppdataDirectory()]=],
+  ["love.filesystem.getDirectoryItems"] = [=[{table} items = love.filesystem.getDirectoryItems({string} dir)]=],
+  ["love.filesystem.getIdentity"] = [=[love.filesystem.getIdentity({string} name)]=],
+  ["love.filesystem.getLastModified"] = [=[{number} modtime, {string} errormsg = love.filesystem.getLastModified({string} filename)]=],
+  ["love.filesystem.getSaveDirectory"] = [=[{string} path = love.filesystem.getSaveDirectory()]=],
+  ["love.filesystem.getSize"] = [=[{number} size, {string} errormsg = love.filesystem.getSize({string} filename)]=],
+  ["love.filesystem.getUserDirectory"] = [=[{string} path = love.filesystem.getUserDirectory()]=],
+  ["love.filesystem.getWorkingDirectory"] = [=[{string} path = love.filesystem.getWorkingDirectory()]=],
+  ["love.filesystem.isDirectory"] = [=[{boolean} is_dir = love.filesystem.isDirectory({string} path)]=],
+  ["love.filesystem.isFile"] = [=[{boolean} is_file = love.filesystem.isFile({string} path)]=],
+  ["love.filesystem.isFused"] = [=[{boolean} fused = love.filesystem.isFused()]=],
+  ["love.filesystem.lines"] = [=[{function} iterator = love.filesystem.lines({string} name)]=],
+  ["love.filesystem.load"] = [=[{function} chunk = love.filesystem.load({string} name)]=],
+  ["love.filesystem.newFile"] = [=[{File} file, {string} errorstr = love.filesystem.newFile({string} filename, {FileMode} mode)]=],
+  ["love.filesystem.newFileData"] = [=[{FileData} data = love.filesystem.newFileData({string} contents, {string} name, {FileDecoder} decoder)]=],
+  ["love.filesystem.read"] = [=[{string} contents, {number} size = love.filesystem.read({string} name, {number} bytes)]=],
+  ["love.filesystem.remove"] = [=[{boolean} ok = love.filesystem.remove({string} name)]=],
+  ["love.filesystem.setIdentity"] = [=[love.filesystem.setIdentity({string} name, {SearchOrder} searchorder)]=],
+  ["love.filesystem.write"] = [=[{boolean} success = love.filesystem.write({string} name, {string} data, {number} size)]=]
+}

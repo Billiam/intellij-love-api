@@ -1,0 +1,35 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.physics.getDistance"] = [=[{number} distance, {number} x1, {number} y1, {number} x2, {number} y2 = love.physics.getDistance({Fixture} fixture1, {Fixture} fixture2)]=],
+  ["love.physics.getMeter"] = [=[{number} scale = love.physics.getMeter()]=],
+  ["love.physics.newBody"] = [=[{Body} body = love.physics.newBody({World} world, {number} x, {number} y, {BodyType} type)]=],
+  ["love.physics.newChainShape"] = [=[{ChainShape} shape = love.physics.newChainShape({boolean} loop, {number} x1, {number} y1, {number} x2, {number} y2)]=],
+  ["love.physics.newCircleShape"] = [=[{CircleShape} shape = love.physics.newCircleShape({Body} body, {number} x, {number} y, {number} radius)]=],
+  ["love.physics.newDistanceJoint"] = [=[{DistanceJoint} joint = love.physics.newDistanceJoint({Body} body1, {Body} body2, {number} x1, {number} y1, {number} x2, {number} y2, {boolean} collideConnected)]=],
+  ["love.physics.newEdgeShape"] = [=[{EdgeShape} shape = love.physics.newEdgeShape({number} x1, {number} y1, {number} x2, {number} y2)]=],
+  ["love.physics.newFixture"] = [=[{Fixture} fixture = love.physics.newFixture({Body} body, {Shape} shape, {number} density)]=],
+  ["love.physics.newFrictionJoint"] = [=[{FrictionJoint} joint = love.physics.newFrictionJoint({Body} body1, {Body} body2, {number} x, {number} y, {boolean} collideConnected)]=],
+  ["love.physics.newGearJoint"] = [=[{Joint} joint = love.physics.newGearJoint({Joint} joint1, {Joint} joint2, {number} ratio, {boolean} collideConnected)]=],
+  ["love.physics.newMouseJoint"] = [=[{Joint} joint = love.physics.newMouseJoint({Body} body, {number} x, {number} y)]=],
+  ["love.physics.newPolygonShape"] = [=[{PolygonShape} shape = love.physics.newPolygonShape({Body} body, {number} ...)]=],
+  ["love.physics.newPrismaticJoint"] = [=[{PrismaticJoint} joint = love.physics.newPrismaticJoint({Body} body1, {Body} body2, {number} x, {number} y, {number} ax, {number} ay, {boolean} collideConnected)]=],
+  ["love.physics.newPulleyJoint"] = [=[{Joint} joint = love.physics.newPulleyJoint({Body} body1, {Body} body2, {number} gx1, {number} gy1, {number} gx2, {number} gy2, {number} x1, {number} y1, {number} x2, {number} y2, {number} ratio, {boolean} collideConnected)]=],
+  ["love.physics.newRectangleShape"] = [=[{PolygonShape} shape = love.physics.newRectangleShape({Body} body, {number} x, {number} y, {number} width, {number} height, {number} angle)]=],
+  ["love.physics.newRevoluteJoint"] = [=[{Joint} joint = love.physics.newRevoluteJoint({Body} body1, {Body} body2, {number} x, {number} y, {number} collideConnected)]=],
+  ["love.physics.newRopeJoint"] = [=[{RopeJoint} joint = love.physics.newRopeJoint({Body} body1, {Body} body2, {number} x1, {number} y1, {number} x2, {number} y2, {number} maxLength, {boolean} collideConnected)]=],
+  ["love.physics.newWeldJoint"] = [=[{WeldJoint} joint = love.physics.newWeldJoint({Body} body1, {Body} body2, {number} x, {number} y, {boolean} collideConnected)]=],
+  ["love.physics.newWheelJoint"] = [=[{WheelJoint} joint = love.physics.newWheelJoint({Body} body1, {Body} body2, {number} x, {number} y, {number} ax, {number} ay, {boolean} collideConnected)]=],
+  ["love.physics.newWorld"] = [=[{World} world = love.physics.newWorld({number} xg, {number} yg, {boolean} sleep)]=],
+  ["love.physics.setMeter"] = [=[love.physics.setMeter({number} scale)]=]
+}

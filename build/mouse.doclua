@@ -1,0 +1,29 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.mouse.getCursor"] = [=[{Cursor} cursor = love.mouse.getCursor()]=],
+  ["love.mouse.getPosition"] = [=[{number} x, {number} y = love.mouse.getPosition()]=],
+  ["love.mouse.getSystemCursor"] = [=[{Cursor} cursor = love.mouse.getSystemCursor({CursorType} ctype)]=],
+  ["love.mouse.getX"] = [=[{number} x = love.mouse.getX()]=],
+  ["love.mouse.getY"] = [=[{number} y = love.mouse.getY()]=],
+  ["love.mouse.isDown"] = [=[{boolean} down = love.mouse.isDown({MouseConstant} button)]=],
+  ["love.mouse.isGrabbed"] = [=[{boolean} grabbed = love.mouse.isGrabbed()]=],
+  ["love.mouse.isVisible"] = [=[{boolean} visible = love.mouse.isVisible()]=],
+  ["love.mouse.newCursor"] = [=[{Cursor} cursor = love.mouse.newCursor({ImageData} imageData, {number} hotx, {number} hoty)]=],
+  ["love.mouse.setCursor"] = [=[love.mouse.setCursor()]=],
+  ["love.mouse.setGrabbed"] = [=[love.mouse.setGrabbed({boolean} grab)]=],
+  ["love.mouse.setPosition"] = [=[love.mouse.setPosition({number} x, {number} y)]=],
+  ["love.mouse.setVisible"] = [=[love.mouse.setVisible({boolean} visible)]=],
+  ["love.mouse.setX"] = [=[love.mouse.setX({number} x)]=],
+  ["love.mouse.setY"] = [=[love.mouse.setY({number} y)]=]
+}

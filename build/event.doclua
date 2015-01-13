@@ -1,0 +1,20 @@
+BASE_URL = 'https://love2d.org/wiki/'
+
+function getDocumentationUrl(name)
+  return BASE_URL .. name
+end
+
+function getQuickNavigateDocumentation(name)
+  return '[LOVE]\n' .. SIGNATURES[name]
+end
+
+
+-- begin signatures
+SIGNATURES = {
+  ["love.event.clear"] = [=[love.event.clear()]=],
+  ["love.event.poll"] = [=[{function} i = love.event.poll()]=],
+  ["love.event.pump"] = [=[love.event.pump()]=],
+  ["love.event.push"] = [=[love.event.push({Event} e, {mixed} a, {mixed} b, {mixed} c, {mixed} d)]=],
+  ["love.event.quit"] = [=[love.event.quit()]=],
+  ["love.event.wait"] = [=[{Event} e, {mixed} a, {mixed} b, {mixed} c, {mixed} d = love.event.wait()]=]
+}
